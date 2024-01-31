@@ -81,8 +81,18 @@ To run the database container:
 
 > docker compose up --build --detach
 
-Go to the `migrations-backend` directory and run:
+* Create/Generate new migration
+  #### use this command if you make some db change
+  > npm run migration:generate --name=MigrationName
+  #### use this command if you want empty migration file
+  > npm run migration:create --name=MigrationName
+* Run migration
+  > npm run migration:run
+
+#### after you run migration, you can start project
+
+> npm run start:debug
 
 > npm run start:dev
 
-The migrations scripts are inside the `package.json` file inside the `migrations-backend` directory
+The migrations scripts are inside the `package.json`
